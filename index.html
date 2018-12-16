@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Have Your Cake</title>
+<!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+<!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+<!-- START VIEW -->
+
+<div role="" class="container" id="sectionstart">
+    <p id="startone">SWEET</p>
+    <p id="starttwo">TOOTH</p>
+    <p id="description">Want to treat yo' self?<br>Have your cake & eat it, too.</p>
+    <form id="formstart">
+        <input type="submit" value="YAAAS">
+    </form>
+</div>
+
+
+<header role="banner" class="hidden" id="header">
+    Have Your Cake
+</header>
+
+
+<!-- HOW VIEW -->
+
+<div role="article" class="container hidden" id="sectionhow">
+    <fieldset>
+        <legend>How</span> are you gunna get it?</legend>
+        <form id="formhow" class="openmodal">
+            <input class="selecthow" id="make" type="button" name="make" value="make">
+            <input class="selecthow" id="buy" type="button" name="buy" value="buy">
+        </form>
+    </fieldset>
+</div>
+
+<!-- MODAL WINDOW -->
+<div class="container hidden w3-modal" id="modalwindow">
+    <fieldset id="modalcontent">
+        <legend>Where you at?</legend>
+        <form id="formzipcode">
+        Zipcode<br>
+            <input type="text" id="inputlocation" name="location" value="Enter a Zipcode" pattern="(\d{5}([\-]\d{4})?)"
+            required><br>
+            <input type="submit" class="submitlocation" name="Where I is">
+        </form>
+        <input type="submit" class="submitrestart" value="Nevermind">
+    </fieldset>
+</div>
+
+
+<!-- WHAT VIEW -->
+
+<div role="article" class="container hidden" id="sectionwhat">
+    <fieldset id="modalcontent">
+        <legend>What are you gunna eat?</legend>
+        <form id="formwhat">
+            <input class="selectwhat" type="button" id="cake" value="cake">
+            <input class="selectwhat" type="button" id="icecream" value="ice cream">
+            <input class="selectwhat" type="button" id="cookies" value="cookies">
+            <input class="selectwhat" type="button" id="macaroons" value="macaroons">
+            <input class="selectwhat" type="button" id="milkshake" value="milkshake">
+            <input class="selectwhat" type="button" id="dessert" value="surprise me!">
+        </form>
+    </fieldset>
+</div>
+
+
+<!-- LOADING VIEW -->
+<!-- NICE TO HAVE BUT WAIT TILL EVERYTHING ELSE IS DONE -->
+
+
+
+
+<!-- RECIPES VIEW -->
+
+<div role="article" id="sectionrecipes" class="container hidden">
+    <h2 id="recipesheader">It's gunna be delicious!</h2>
+    <div id="recipesresults"></div>     
+</div>
+
+
+<!-- LOCATIONS VIEW -->
+
+<div role="article" id="sectionlocations" class="container hidden">
+    <h2 id="locationsheader">Go get'em, tiger!</h2>
+    <div id="locationsresults"></div>    
+</div>
+
+
+<!-- FOOTER -->
+
+<footer role="contentinfo" id="footer" class="hidden">
+    <input type="submit" class="submitrestart" value="Want Something Different?">
+</footer>
+
+
+<!-- JAVASCRIPT -->
+    <script src="index.js"></script>
+
+
+
+
+</body>
+
+
+</html>
