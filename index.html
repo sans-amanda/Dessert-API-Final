@@ -22,9 +22,9 @@
 <div role="section" class="container" id="sectionstart">
     <h1 class="start">SWEET</h1>
     <h1 class="start">TOOTH</h1>
-    <p id="description">Want to treat yo' self?<br>Have your cake & eat it, too.</p>
+    <h2>Craving something sweet? Find out how to make or where to get a treat for yourself!</h2>
     <form id="formstart">
-        <input type="submit" value="begin">
+        <input role="tab" type="submit" value="begin">
     </form>
 </div>
 
@@ -37,42 +37,41 @@
 <!-- HOW VIEW -->
 
 <div role="article" class="container hidden" id="sectionhow">
+        <h2>How are you gunna get it?</h2>
     <fieldset>
-        <legend>How</span> are you gunna get it?</legend>
-        <form id="formhow" class="openmodal">
-            <input class="selecthow" id="make" type="button" name="make" value="make">
-            <input class="selecthow" id="buy" type="button" name="buy" value="buy">
+        <form role="tablist" id="formhow" class="openmodal">
+            <input role="tab" class="selecthow" id="make" type="button" name="make" value="make">
+            <input role="tab" class="selecthow" id="buy" type="button" name="buy" value="buy">
         </form>
     </fieldset>
 </div>
 
 <!-- MODAL WINDOW -->
-<div class="container hidden w3-modal" id="modalwindow">
-    <fieldset id="modalcontent">
-        <legend>Where you at?</legend>
-        <form id="formzipcode">
-        Zipcode<br>
-            <input type="text" id="inputlocation" name="location" value="Enter a Zipcode" pattern="(\d{5}([\-]\d{4})?)"
-            required><br>
-            <input type="submit" class="submitlocation" name="Where I is">
-        </form>
-        <input type="submit" class="submitrestart" value="Nevermind">
-    </fieldset>
+<div class="hidden w3-modal" id="modalwindow">
+        <fieldset id="modalcontent">
+            <h2>Where are you?</h2>
+            <form id="formzipcode">
+                <input role="tab" type="text" id="inputlocation" name="location" value="Enter a Zipcode" pattern="(\d{5}([\-]\d{4})?)"
+                required><br>
+                <input role="tab" type="submit" class="submitlocation" name="Where I is">
+            </form>
+            <input type="submit" class="submitrestart" value="Nevermind">
+        </fieldset>
 </div>
 
 
 <!-- WHAT VIEW -->
 
 <div role="article" class="container hidden" id="sectionwhat">
+    <h2>What are you gunna eat?</h2>
     <fieldset id="modalcontent">
-        <legend>What are you gunna eat?</legend>
-        <form id="formwhat">
-            <input class="selectwhat" type="button" id="cake" value="cake">
-            <input class="selectwhat" type="button" id="icecream" value="ice cream">
-            <input class="selectwhat" type="button" id="cookies" value="cookies">
-            <input class="selectwhat" type="button" id="macaroons" value="macaroons">
-            <input class="selectwhat" type="button" id="milkshake" value="milkshake">
-            <input class="selectwhat" type="button" id="dessert" value="surprise me!">
+        <form role="tablist" id="formwhat">
+            <input role="tab" class="selectwhat" type="button" id="cake" value="cake">
+            <input role="tab" class="selectwhat" type="button" id="icecream" value="ice cream">
+            <input role="tab" class="selectwhat" type="button" id="cookies" value="cookies">
+            <input role="tab" class="selectwhat" type="button" id="macaroons" value="macaroons">
+            <input role="tab" class="selectwhat" type="button" id="milkshake" value="milkshake">
+            <input role="tab" class="selectwhat" type="button" id="dessert" value="surprise me!">
         </form>
     </fieldset>
 </div>
@@ -103,7 +102,7 @@
 <!-- FOOTER -->
 
 <footer role="contentinfo" id="footer" class="hidden">
-    <input type="submit" class="submitrestart" value="Want Something Different?">
+    <input type="submit" class="submitrestart" value="want something different?">
 </footer>
 
 

@@ -80,7 +80,7 @@ $(".selectwhat").click(event => {
 
 // APIS
 function getRecipes() {
-    fetch("https://api.edamam.com/search?app_id=" + idRecipe + "&app_key=" + keyRecipe + "&q=" + inputWhatForm + "&from=0&to=5")
+    fetch("https://api.edamam.com/search?app_id=" + idRecipe + "&app_key=" + keyRecipe + "&q=" + inputWhatForm + "&from=0&to=18")
     .then(response => response.json())
     .then(responseJson => displayRecipes(responseJson))
     //.then(responseJson => console.log(responseJson))
@@ -106,9 +106,15 @@ function displayRecipes(responseJson) {
     for (let i = 0; i < responseJson.hits.length; i++) {
         //console.log("check for loop works");
         $("#recipesresults").append(
-            `<li id="onerecipe">
-            <a href="${responseJson.hits[i].recipe.url}">${responseJson.hits[i].recipe.label}</a>
-            <img src="${responseJson.hits[i].recipe.image}"></li>`)
+            `<div id="reciperesult">
+             <img id="recipeimg" src="${responseJson.hits[i].recipe.image}" href="${responseJson.hits[i].recipe.url}" alt="recipepic"/>
+                <h3 id="recipename">${responseJson.hits[i].recipe.label}</h3>
+                <p id="recipelink">from ${responseJson.hits[i].recipe.source}<br>
+                <a href="${responseJson.hits[i].recipe.url}">go to recipe</a></p>	
+             </div>`)    
+        //<li id="onerecipe">
+        //<a href="${responseJson.hits[i].recipe.url}">${responseJson.hits[i].recipe.label}</a>
+        //<img src="${responseJson.hits[i].recipe.image}"></li>`)
         };
 }
 
@@ -117,9 +123,8 @@ function displayLocations(responseJson) {
     for (let i = 0; i < responseJson.response.venues.length; i++) {
         //console.log("check location loop works");
         $("#locationsresults").append(
-            `<li id="onelocation">
-            <a href="${responseJson.response.venues[i]}">${responseJson.response.venues[i].name}</a>
-            <p>${responseJson.response.venues[i].location.formattedAddress}</p>`)
+            `<h3 id="locationname">${responseJson.response.venues[i].name}</h3>
+            <p id="locationaddress">${responseJson.response.venues[i].location.formattedAddress}</p>`)
         };
 }
 
